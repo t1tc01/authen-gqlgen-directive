@@ -1,0 +1,11 @@
+type Mutation {
+    createUser(input: CreateUserInput): String!
+    deleteUser(userID: ID!): Boolean @hasRole(role: ADMIN)
+}
+
+type Query {
+    login(input: LoginInput): String!
+    logout: String!
+    querryForAdmin: String! @hasRole(role: ADMIN)
+    querryForAll: String!
+}

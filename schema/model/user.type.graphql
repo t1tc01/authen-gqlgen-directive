@@ -1,0 +1,13 @@
+directive @hasRole(role: Role!) on FIELD_DEFINITION
+
+enum Role {
+    ADMIN
+    USER
+}
+
+type User {
+    id: ID!
+    usernam: String!
+    email: String!
+    role: String!
+}
